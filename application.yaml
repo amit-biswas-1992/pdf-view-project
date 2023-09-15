@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: react-pdf-service3
+  name: react-pdf-service3
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: react-pdf-service3
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: react-pdf-service3
+    spec:
+      containers:
+      - image: react-pdf-app:latest
+        name: react-pdf-app
+        resources: {}
+        imagePullPolicy: IfNotPresent
+status: {}
